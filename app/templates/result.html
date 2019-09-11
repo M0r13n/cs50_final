@@ -1,0 +1,4 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h3>Your file is ready you can <a href="{{ url_for(".download", sha1_hash=sha1_hash) }}" download="ascii.txt">download</a> it now</h3>
+{% endblock %}

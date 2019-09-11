@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+    <p>Just upload a Jpeg and let it be converted into finest ASCII Art.</p>
+    <div class="">
+        <form class="form" role="form" method="post" action="" enctype="multipart/form-data">
+            {{ upload.hidden_tag() }}
+            {{ upload.file() }}<br>
+            {{ upload.submit() }}
+        </form>
+    </div>
+
+{% endblock %}

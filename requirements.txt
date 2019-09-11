@@ -1,0 +1,6 @@
+Flask
+WTForms
+Flask-Wtf
+werkzeug
+Pillow
+Gevent

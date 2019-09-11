@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Convert Jpeg's to ASCII Art</title>
+    <!-- meta -->
+    <meta name="description" content="Convert Jpeg's to ASCII Art">
+    <meta name="author" content="Leon Morten Richter">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- styles -->
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" media="screen">
+</head>
+
+<body>
+
+<!-- Main -->
+<div class="container" id="page-container">
+    <div id="content-wrap">
+        <h1><a href="/">Image to ASCII Converter</a></h1>
+        {% block content %}{% endblock %}
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <hr>
+        <p>&copy; 2019 <a href="http://www.leonmortenrichter.de">Leon Morten Richter</a></p>
+    </footer>
+</div>
+
+</body>
+</html>
