@@ -8,7 +8,7 @@ The converter converts any given jpeg into fixed-width ASCII art, while preservi
 ## Flask App
 The Flask App serves as a graphical interface for the converter.
 
-## Installation & Usage
+## Installation & Usage`
 - for Linux/MacOS only
 - just run `./start.sh and the app will install itself and start afterwards
 - the app can then be accessed under localhost:5000
