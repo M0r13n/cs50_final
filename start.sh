@@ -1,9 +1,10 @@
 data_path="./app/temp"
 out_path="./app/out"
-flask_app="app/app.py"
+app_dir="app/"
 
 mkdir -p $data_path
 mkdir -p $out_path
 
-export FLASK_APP=$flask_app
+pip3 install -r "./requirements.txt"
+export FLASK_APP=$app_dir"app.py"
 exec flask run
