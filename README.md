@@ -10,5 +10,5 @@ The Flask App serves as a graphical interface for the converter.
 
 ## Installation & Usage`
 - for Linux/MacOS only
-- just run `./start.sh and the app will install itself and start afterwards
+- just run `./start.sh` and the app will install itself and start afterwards
 - the app can then be accessed under localhost:5000
