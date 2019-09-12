@@ -2,11 +2,44 @@
 {% block content %}
     <p>Just upload a Jpeg and let it be converted into finest ASCII Art.</p>
     <div class="">
-        <form class="form" role="form" method="post" action="" enctype="multipart/form-data">
+        <form class="form" id="uploadForm" role="form" method="post" action="" enctype="multipart/form-data">
             {{ upload.hidden_tag() }}
-            {{ upload.file() }}<br>
-            {{ upload.submit() }}
+            {{ upload.file(id="image") }}<br>
+            <button type="submit" id="submit" disabled>Convert</button>
         </form>
+        <img id="thumbnail" src="#" alt="uploaded image" hidden/>
+        <span id="description">No Image uploaded!</span>
     </div>
 
+    <script>
+        let form = document.forms["uploadForm"];
+        let file_field = document.getElementById('image');
+        let thumbnail = document.getElementById('thumbnail');
+        let description = document.getElementById('description');
+        let btn = document.getElementById('submit');
+
+        function display_thumbnail() {
+            if (file_field.files
+                && file_field.files[0]
+                && ["jpeg", "jpg"].includes(file_field.files[0].name.split('.').pop())) {
+
+                let reader = new FileReader();
+
+                reader.onload = function (e) {
+                    thumbnail.setAttribute('src', e.target.result);
+                    thumbnail.hidden = false;
+                    description.hidden = true;
+                    btn.disabled = false;
+                };
+
+                reader.readAsDataURL(file_field.files[0]);
+            } else {
+                thumbnail.hidden = true;
+                description.hidden = false;
+                btn.disabled = true;
+            }
+        }
+
+        form.addEventListener("change", display_thumbnail);
+    </script>
 {% endblock %}

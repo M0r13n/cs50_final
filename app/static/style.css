@@ -54,3 +54,12 @@ footer p {
 #content-wrap {
     padding-bottom: 2.5rem; /* Footer height */
 }
+
+#thumbnail {
+    width: 100px;
+    margin-top: 25px;
+}
+
+img {
+    -webkit-filter: grayscale(1); /* Webkit */
+}
