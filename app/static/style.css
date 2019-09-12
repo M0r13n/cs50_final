@@ -26,8 +26,12 @@ pre {
 }
 
 #inner {
-    width: 50%;
-    margin: 0 43%;
+    text-align: center;
+}
+
+#skull {
+    display: inline-block;
+    text-align: left;
 }
 
 .footer {
@@ -49,4 +53,13 @@ footer p {
 
 #content-wrap {
     padding-bottom: 2.5rem; /* Footer height */
+}
+
+#thumbnail {
+    width: 100px;
+    margin-top: 25px;
+}
+
+img {
+    -webkit-filter: grayscale(1); /* Webkit */
 }
